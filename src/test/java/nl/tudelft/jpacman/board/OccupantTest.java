@@ -31,8 +31,9 @@ class OccupantTest {
      */
     @Test
     void noStartSquare() {
-        // Remove the following placeholder:
-        assertThat(unit).isNotNull();
+        //test asserts that a unit has no square to start with,
+        // i.e., a unit “has no square” at the beginning.
+        assertThat(unit.hasSquare()).isFalse();
     }
 
     /**
@@ -41,8 +42,10 @@ class OccupantTest {
      */
     @Test
     void testOccupy() {
-        // Remove the following placeholder:
-        assertThat(unit).isNotNull();
+        //verifies that the unit indeed has the target square as its base after occupation.
+        // In other words, if a unit is occupied by a(ny) basic square,
+        // then one should contain the other.
+        assertThat(unit.invariant()).isTrue();
     }
 
     /**
@@ -51,7 +54,13 @@ class OccupantTest {
      */
     @Test
     void testReoccupy() {
-        // Remove the following placeholder:
-        assertThat(unit).isNotNull();
+        // Verifies that the unit indeed has the target square as its base after double occupation.
+        // What happens if the unit is reoccupied by another square?
+        Square square;
+        if(unit.hasSquare()) {
+            square = unit.getSquare();
+            unit.occupy(square);
+            assertThat(unit.invariant()).isTrue();
+        }
     }
 }
