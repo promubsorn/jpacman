@@ -18,6 +18,9 @@ class BasicSquare extends Square {
      */
     private Square[][] board;
 
+    /***
+     *
+     */
     BasicSquare() {
         super();
     }
@@ -33,6 +36,9 @@ class BasicSquare extends Square {
         return null;
     }
 
+    /***
+     *
+     */
     @Test
     void boardTest() {
         BasicSquare basicSquare = new BasicSquare();
@@ -43,6 +49,9 @@ class BasicSquare extends Square {
         assertThat(board.getHeight()).isEqualTo(1);
     }
 
+    /***
+     *
+     */
     @Test
     void nullSquareTest() {
         Square[][] grid = {{null}};

@@ -57,7 +57,7 @@ class OccupantTest {
         // Verifies that the unit indeed has the target square as its base after double occupation.
         // What happens if the unit is reoccupied by another square?
         Square square;
-        if(unit.hasSquare()) {
+        if (unit.hasSquare()) {
             square = unit.getSquare();
             unit.occupy(square);
             assertThat(unit.invariant()).isTrue();
