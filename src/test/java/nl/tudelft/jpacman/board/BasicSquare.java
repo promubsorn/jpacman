@@ -16,7 +16,7 @@ class BasicSquare extends Square {
     /**
      * Creates a new basic square.
      */
-    private Square[][] board;
+//    private Square[][] board;
 
     /***
      *
