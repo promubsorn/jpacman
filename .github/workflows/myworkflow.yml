@@ -32,6 +32,10 @@ jobs:
       uses: gradle/gradle-build-action@bd5760595778326ba7f1441bcf7e88b49de61a25 # v2.6.0
       with:
         arguments: build
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3a1750de0db1e682321508ac2d1ec6dd21dfdfaf
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
