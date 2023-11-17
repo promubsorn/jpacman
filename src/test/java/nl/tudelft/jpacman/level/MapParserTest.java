@@ -27,6 +27,9 @@ public class MapParserTest {
     @Mock
     private Blinky blinky;
 
+    /***
+     *
+     */
     @Test
     public void testParseMapGood() {
         MockitoAnnotations.initMocks(this);
@@ -43,6 +46,9 @@ public class MapParserTest {
         Mockito.verify(levelFactory, Mockito.times(1)).createGhost();
     }
 
+    /***
+     *
+     */
     @Test
     public void testParseMapWrongFormat() {
         // Define the expected exception class
